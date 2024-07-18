@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GPA Calculator</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="https://ghassanelgendy.github.io/assets/favicon/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="https://ghassanelgendy.github.io/assets/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="https://ghassanelgendy.github.io/assets/favicon/favicon-16x16.png" />
+		<link
+			rel="manifest"
+			href="https://ghassanelgendy.github.io/assets/favicon/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="https://ghassanelgendy.github.io/assets/favicon/safari-pinned-tab.svg"
+			color="#5bbad5" />
+		<link
+			rel="shortcut icon"
+			href="https://ghassanelgendy.github.io/assets/favicon/favicon.ico" />
+		<meta name="msapplication-TileColor" content="#2b5797" />
+		<meta
+			name="msapplication-config"
+			content="https://ghassanelgendy.github.io/assets/favicon/browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff" />
+	</head>
+	<body class="gradient">
+		<script
+			src="https://code.jquery.com/jquery-3.7.0.min.js"
+			integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+			crossorigin="anonymous"></script>
+		<script>
+			$(window).on("load", function () {
+				$(".loader-wrapper").fadeOut("slow");
+			});
+		</script>
+		<div class="loader-wrapper">
+			<span class="loader"> <img src="./coding.png" alt="" /></span>
+			<div class="loading-text">Loading...</div>
+		</div>
+		<div class="upperdiv">
+			<p>
+				Made by aldwaltly. <b>Star</b> the repo
+				<a
+					href="https://github.com/aldwaltly/GPA-Calculator"
+					target="_blank"
+					>here!</a
+				>
+			</p>
+		</div>
+
+		<div class="header">
+			<h1 style="font-size: 1.6rem">
+				GPA Calculator <br />
+				<span class="para">For FCAI</span>
+				<div class="img-container"><img src="" alt="" /></div>
+			</h1>
+			<div class="buttons">
+				<button class="lan" onclick="changeLanguage('en')">English</button>
+				<button class="lan" onclick="changeLanguage('ar')">
+					<span class="arabic">العربية</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="alert success-alert">
+				<h3 id="alert" class="arabic">
+					Courses list is autosaved, you can close the tab <br />and come back
+					next term!
+				</h3>
+				<a class="close">&times;</a>
+			</div>
+			<div class="card">
+				<div class="Style">
+					<label for="courseName"
+						><span
+							style="display: block"
+							class="tittle arabic"
+							id="courseNaming"
+							>Course Name:</span
+						></label
+					>
+					<input
+						style="display: block"
+						type="text"
+						id="courseName"
+						name="courseName"
+						class="input"
+						placeholder="Optional" />
+				</div>
+				<div class="Style">
+					<label class="arabic" for="grade" id="gradeLabel"
+						><span class="arabic tittle">Course Grade:</span></label
+					>
+					<select class="input" id="grade" name="grade" required>
+						<option value="A+">A+</option>
+						<option value="A">A</option>
+						<option value="A-">A-</option>
+						<option value="B+">B+</option>
+						<option value="B">B</option>
+						<option value="B-">B-</option>
+						<option value="C+">C+</option>
+						<option value="C">C</option>
+						<option value="C-">C-</option>
+						<option value="D+">D+</option>
+						<option value="D">D</option>
+						<option value="D-">D-</option>
+						<option value="F">F</option>
+					</select>
+				</div>
+				<div class="Style">
+					<label for="credit" class="arabic"
+						><span id="creditLabel">Credit Hours</span>
+					</label>
+					<div class="radio-input">
+						<label>
+							<input
+								class="radio"
+								type="radio"
+								id="credit2"
+								name="credit"
+								value="2"
+								required /><span class="Hours arabic" id="hoursLabel2"
+								>2 Hours</span
+							>
+						</label>
+						<label>
+							<input
+								type="radio"
+								class="radio"
+								id="credit3"
+								name="credit"
+								value="3" />
+							<span id="hoursLabel3" class="arabic">3 Hours</span>
+						</label>
+						<span class="selection"></span>
+					</div>
+				</div>
+
+				<button
+					class="arabic"
+					type="button"
+					style="font-weight: var(--fw-bold)"
+					onclick="addCourse()"
+					id="addCourseLabel">
+					Add Course
+				</button>
+				<h3 id="gpaLabel" class="arabic">
+					<span class="arabic tittle">Your GPA:</span>
+					<h2 id="gpa">0.00</h2>
+				</h3>
+				<div class="courselists arabic">
+					<ul id="courseList"></ul>
+				</div>
+				<div class="howItWorks">
+					<a class="linko" href="./bylaw.jpeg" download="bylaw-page-12"
+						>How it works</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
