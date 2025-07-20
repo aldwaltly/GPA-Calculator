@@ -193,8 +193,8 @@ function calculateGPA() {
 	if (document.querySelector("#gpa").textContent == "NaN") {
 		document.querySelector("#gpa").textContent = "0.0";
 	}
-	document.getElementById("totalScore").innerHTML = totalGradePoints
-	document.getElementById("totalCredit").innerHTML = totalCredits;
+	document.getElementById("totalScore").textContent = totalGradePoints
+	document.getElementById("totalCredit").textContent = totalCredits;
 }
 
 // convert grade to grade points
