@@ -354,6 +354,12 @@ ul {
 #gpa {
     font-weight: bold;
 }
+#totalScore {
+    font-weight: bold;
+}
+#totalCredit {
+    font-weight: bold;
+}
 
 .lan {
     padding: 0.3rem 1.3rem;
